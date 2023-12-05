@@ -1,4 +1,4 @@
-import { db } from "../database/conn";
+import { db } from "../database/conn.js";
 
 const createUser = async (req, res) => {
 
@@ -15,13 +15,11 @@ const createUser = async (req, res) => {
                     ($1, $2, $3, $4) 
                 returning *`;
 
-
     const result = await db.query(sql, params);
 
     res.json(result);
 
 }
-
 
 export {
     createUser

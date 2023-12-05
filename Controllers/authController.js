@@ -1,6 +1,7 @@
-import { db } from "../database/conn";
+import { db } from "../database/conn.js";
 import jwt from 'jsonwebtoken';
 import cookie from 'cookie';
+import { validarCookie } from "../helpers/helperCookie.js";
 
 const autenticacion = async (req, res) => {
 
@@ -50,6 +51,7 @@ const autenticacion = async (req, res) => {
 
 
 }
+
 
 const validarCookieActiva = (req, res) => {
 
